@@ -1,10 +1,23 @@
 import openai
 import json
+import mysql.connector
 
 if __name__ == '__main__':
     openAiFile = open('openaiauth.json')
     openai.api_key =  json.load(openAiFile)["key"]
     openAiFile.close()
+
+    dbInfoFile = open('db.json')
+    dbInfo = json.load(dbInfoFile)
+    dbInfoFile.close()
+
+    dbConn = mysql.connector.connect(
+        host=dbInfo['address'],
+        user=dbInfo['user'],
+        password=dbInfo['password']
+    )
+    dbCursor = dbConn.cursor()
+
 
     chatMessages=[
                 {"role": "system", "content": "You are Donald Trump. You should respond to all messages in the speaking style of Donald Trump"}
