@@ -18,11 +18,23 @@ if __name__ == '__main__':
     )
     dbCursor = dbConn.cursor()
 
+    phoneNumber = "+13135551234"
 
-    chatMessages=[
-                {"role": "system", "content": "You are Donald Trump. You should respond to all messages in the speaking style of Donald Trump"}
-            ]
+    getQuery = f"SELECT * FROM rejection.dynamic_chatbot where phoneNumber = '{phoneNumber}' ORDER BY timeGenerated DESC"
+
     while True:
+
+        dbCursor.execute(getQuery)
+
+        getResult = dbCursor.fetchone()
+
+        chatMessages = []
+        if getResult == None:
+            chatMessages = [{"role": "system", "content": "You are Donald Trump. You should respond to all messages in the speaking style of Donald Trump"}]
+        else:
+            chatMessages = [json.loads(getResult)]
+    
+
         userInput = input("Enter a message to send: ")
         chatMessages.append({"role": "user", "content": userInput})
         response = openai.ChatCompletion.create(
@@ -30,4 +42,10 @@ if __name__ == '__main__':
             messages=chatMessages
         )
         chatMessages.append({"role": response['choices'][0]['message']['role'], "content": response['choices'][0]['message']['content']})
+
+        saveQuery = "INSERT INTO rejection.dynamic_chatbot (conversation, phoneNumber) VALUES (%s, %s)"
+        saveValues = (str(chatMessages), phoneNumber)
+        dbCursor.execute(saveQuery, saveValues)
+        dbConn.commit()
+
         print("Response: " + response['choices'][0]['message']['content'])
