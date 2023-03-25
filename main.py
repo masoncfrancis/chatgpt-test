@@ -1,6 +1,6 @@
 import openai
 import json
-import mysql.connector
+#import mysql.connector
 
 if __name__ == '__main__':
     openAiFile = open('openaiauth.json')
