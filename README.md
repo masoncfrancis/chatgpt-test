@@ -92,7 +92,7 @@ by trying this program out.
 
 ### Start the application
 
-To start the project server, run this command from the project folder root (replacing `python3` with `python` as necessary for your installation):
+To start the program, run this command from the project folder root (replacing `python3` with `python` as necessary for your installation):
 
 ```
 python3 main.py
