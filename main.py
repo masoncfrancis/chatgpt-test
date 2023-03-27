@@ -31,8 +31,7 @@ if __name__ == '__main__':
                 {"role": "system", "content": f"You are {botPerson}. You should respond to all messages in the speaking style of {botPerson}"}
                 ]
 
-                print(f"Your chatbot personality was successfully changed to {botPerson}")
-                print("All chat history has been deleted")
+                print(f"Your chatbot personality was successfully changed to {botPerson}. All chat history has been deleted.")
 
             elif userInput[1:].split()[0] == "default":
                 botPerson = "An AI assistant named Angie"
@@ -41,8 +40,8 @@ if __name__ == '__main__':
                 {"role": "system", "content": f"You are {botPerson}. You should respond to all messages in the speaking style of {botPerson}"}
                 ]
 
-                print(f"Your chatbot personality was successfully changed to {botPerson}")
-                print("All chat history has been deleted")
+                print(f"Your chatbot personality was successfully changed to {botPerson}. All chat history has been deleted.")
+                
         else:
             chatMessages.append({"role": "user", "content": userInput})
             response = openai.ChatCompletion.create(
