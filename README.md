@@ -33,6 +33,8 @@ Open a terminal in the project folder and run this command (replacing `python3` 
 python3 -m venv venv
 ```
 
+#### Activating The Virtual Environment
+
 Next, you will need to activate the virtual environment. To activate the virtual environment on a UNIX style operating system (Linux, macOS, etc.), run this command:
 
 ```
