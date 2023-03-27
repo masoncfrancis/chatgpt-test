@@ -48,6 +48,26 @@ To activate the virtual environment in Windows, run this command from the projec
 You will need to have this virtual environment activated in order to run the code in this project. If your virtual environment ever becomes deactivated, you may run the above command (for your 
 applicable OS) again from the project folder root. 
 
+#### Deactivating The Virtual Environment
+
+When you're done playing with this program, you can deactivate the virtual environment.
+
+On Linux, run:
+
+```
+deactivate
+```
+
+On Windows, in the root project folder run:
+
+```
+Scripts/deactivate
+```
+
+You can reactivate the virtual environment when you feel like using the program again by running the commands 
+mentioned above for your specific operating system. FYI, you only need to create the virtual environment once. 
+You can activate it and deactivate it as many times as you need to. 
+
 ### Install Project Dependencies
 
 This project requires a few packages to run properly.
