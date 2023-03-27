@@ -3,6 +3,17 @@ This repo contains code used to test the ChatGPT API.
 
 ## Instructions
 
+### Getting The Code
+
+You can get the code for this project using git on the command line. Simply run this command:
+
+```
+git clone https://github.com/masoncfrancis/chatgpt-test.git
+```
+
+You can also download a zip of the code from the GitHup repo, but I personally think using git to get it is easier. 
+Plus, if you use git, you can grab any updates I make by running `git pull` from inside the folder.
+
 ### Prerequisites
 
 Python 3.8+ is required for this project. If Python is not installed on your computer, please follow 
@@ -10,7 +21,6 @@ Python 3.8+ is required for this project. If Python is not installed on your com
 
 Specific Python packages are required to run this project. More details are found in the following section. 
 
-Code for the project may be cloned or downloaded from this GitHub repo.
 
 ### Create a Virtual Environment
 
