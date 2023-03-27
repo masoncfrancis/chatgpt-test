@@ -63,7 +63,7 @@ deactivate
 On Windows, in the root project folder run:
 
 ```
-Scripts/deactivate
+.\venv\Scripts\deactivate
 ```
 
 You can reactivate the virtual environment when you feel like using the program again by running the commands 
