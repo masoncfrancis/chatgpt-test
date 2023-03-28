@@ -20,9 +20,9 @@ if __name__ == '__main__':
     print("\nOr to change it to Ted from Bill and Ted's Excellent Adventure, you'd type:")
     print("#changeperson Ted from Bill and Ted's Excellent Adventure")
     print("\nTo reset the chatbot to default, type:")
-    print("#default\n")
+    print("#default")
     while True:
-        userInput = input("Enter a message to send: ")
+        userInput = input("\nEnter a message to send: ")
 
         # Check for command
         if userInput[0:1] == "#":
