@@ -47,7 +47,7 @@ if __name__ == '__main__':
         else:
             chatMessages.append({"role": "user", "content": userInput})
             response = openai.ChatCompletion.create(
-                model="gpt-3.5-turbo",
+                model="gpt-4",
                 messages=chatMessages
             )
             chatMessages.append({"role": response['choices'][0]['message']['role'], "content": response['choices'][0]['message']['content']})
