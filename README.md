@@ -22,7 +22,7 @@ Python 3.8+ is required for this project. If Python is not installed on your com
 Specific Python packages are required to run this project. More details are found in the following section. 
 
 
-### Create a Virtual Environment
+### Create a Virtual Environment (optional but recommended)
 
 Once the code has been downloaded or cloned to a folder, it is recommended (but not required) to create a Python virtual environment. If you decide not to, please skip to the 'Install Project Dependencies' section. 
 Otherwise, continue following the instructions in this section. 
