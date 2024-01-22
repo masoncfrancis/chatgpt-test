@@ -1,5 +1,5 @@
 # chatgpt-test
-This repo contains code used to test the ChatGPT API. 
+My own implementation of ChatGPT through the OpenAI API. Runs in a terminal. 
 
 ## Instructions
 
